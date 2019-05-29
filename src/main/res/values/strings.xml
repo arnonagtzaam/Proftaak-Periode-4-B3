@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NFC test app</string>
+    <string name="connectionTextView">Waiting for player 2...</string>
 </resources>

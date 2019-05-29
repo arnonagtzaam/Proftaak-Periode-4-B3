@@ -6,6 +6,7 @@ import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.nfc.*;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
-        textView = findViewById(R.id.text);
+        textView = findViewById(R.id.InstructionText);
 
         if (mNfcAdapter == null) {
             // Stop here, we definitely need NFC
@@ -36,14 +37,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     private void handleIntent(Intent intent) {
-        this.textView.setText("intent: " + intent.getAction());
+        this.textView.setText("Hold your phone against a nearby connection pole");
         if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())) {
+            View view = new View(this);
+            Intent waitingForPlayerIntent = new Intent(view.getContext(),WaitingForPlayers.class);
+            view.getContext().startActivity(waitingForPlayerIntent);
 
-            this.textView.setText("Registered NFC input");
-            System.out.println("karelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarelkarel");
+
         }
     }
 }
