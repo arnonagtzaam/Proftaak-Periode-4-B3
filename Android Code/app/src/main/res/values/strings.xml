@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NFC test app</string>
+    <string name="connectionTextView">Verbinding maken...</string>
+</resources>

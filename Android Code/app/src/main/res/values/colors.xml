@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="TictacBlue">#001EFF</color>
+    <color name="TictacRed">#F3C0C6</color>
+    <color name="eftelingRood">#AC1E2C</color>
+    <color name = "roze">#F3BABF</color>
+</resources>
